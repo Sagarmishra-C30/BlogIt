@@ -1,4 +1,68 @@
 {% extends "layout.html" %}
 {% block content %}
-	<h1>About Page</h1>
+	<section id="aboutPg" class="media content-section">
+		<div class="media-body">
+			<h1>About BlogIt</h1>
+			<hr>
+			<p>BlogIt is a web application built with Python using the Flask framework. It provides a platform for users to create, read, update, and delete blog posts. The application also includes user management functionalities such as user registration, login, logout, password reset, and user profile management.</p>
+
+			<h3>Features</h3>
+			<hr>
+
+			<h4>Blog Post Management</h4>
+			<ul>
+			<li>Create a new blog post by providing a title, content, and optional image.</li>
+			<li>Allows you to edit or delete your existing blog post.</li>
+			<li>View other people's blog posts.</li>
+			</ul>
+
+			<h4>User Management</h4>
+			<ul>
+			<li>Register a new user account by providing a unique username, valid email address, and secure password.</li>
+			<li>Log in to an existing user account using the email and password.</li>
+			<li>Log out from the user account, ending the session.</li>
+			<li>Reset the password by requesting a password reset email.</li>
+			<li>Update the user profile information, including the username, email, and profile image.</li>
+			<li>Delete the user account, removing all associated blog posts.</li>
+			</ul>
+
+			<h4>Authentication and Authorization</h4>
+			<ul>
+			<li>Secure user authentication using password hashing with bcrypt.</li>
+			<li>Protect routes and functionalities from unauthorized access.</li>
+			<li>Restrict access to certain actions based on user roles or ownership.</li>
+			</ul>
+			<hr>
+
+			<h3>About the Developer</h3>
+			<p>Hello, I am Sagar Mishra, the developer of BlogIt. I created this application as a personal project to showcase my skills in web development and my proficiency in using the Flask framework. Flask Blog is the result of my passion for building user-friendly and feature-rich web applications.</p>
+
+			<h4>Technologies Used</h4>
+			<ul>
+			<li>Python</li>
+			<li>Flask</li>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>Bootstrap</li>
+			<li>Jinja2</li>
+			</ul>
+
+			<h4>Acknowledgments</h4>
+			<p>I would like to express my gratitude to the following individuals/resources for their contributions, inspiration, and guidance throughout the development process:</p>
+			<ul>
+			<li>Corey Schafer</li>
+			</ul>
+			<hr>
+
+			<p>Feel free to reach out to me if you have any questions, suggestions, or feedback. Let's connect and build amazing things together!</p>
+
+			<ul class="contact-links">
+			<li><a href="https://wwww.linkedin/in/sagar-mishra-developer">LinkedIn</a></li>
+			<li><a href="https://www.github.com/Sagarmishra-C30">GitHub</a></li>
+			<li><a href="mailto:Timepass082822@gmail.com">Email</a></li>
+			</ul>
+		</div>
+	</section>
+	
+
 {% endblock content %}

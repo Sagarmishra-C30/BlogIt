@@ -54,9 +54,9 @@ To run the Flask Blog application locally, please follow the steps below:
         For Windows:
 
 ```shell
-```
     venv\Scripts\activate
-        For macOS/Linux:
+```        
+		For macOS/Linux:
 
 ```shell
     source venv/bin/activate
@@ -73,23 +73,23 @@ To run the Flask Blog application locally, please follow the steps below:
     To generate a secret key, run below script
 ```shell
     import secrets
-	   your_secret_key = secrets.token_hex(16)
+	your_secret_key = secrets.token_hex(16)
 ```
  
     Copy the output and assign it to SECRET_KEY varible
 ```shell
-	   SECRET_KEY = your_secret_key
+    SECRET_KEY = your_secret_key
 ```	
 	
 	Provide your DB URI if u already have one. Else to use existing DB:
 ```shell
-	   SQLALCHEMY_DATABASE_URI = sqlite:///site.db
+    SQLALCHEMY_DATABASE_URI = sqlite:///site.db
 ```	
     
 	Use your working email and password - this is used to as source email for sending mails
     
 ```shell	
-	   MAIL_USERNAME = [your_email]
+    MAIL_USERNAME = [your_email]
     MAIL_PASSWORD = [your_password]
 ```
 
@@ -105,47 +105,46 @@ To run the Flask Blog application locally, please follow the steps below:
 
 The Flask Blog application utilizes the following external modules:
 
-			alembic==1.7.7
-			bcrypt==3.2.2
-			blinker==1.4
-			cffi==1.15.0
-			click==8.1.3
-			colorama==0.4.4
-			dnspython==2.2.1
-			dominate==2.6.0
-			email-validator==1.2.1
-			Flask==2.1.2
-			Flask-Bcrypt==1.0.1
-			Flask-Bootstrap==3.3.7.1
-			Flask-Login==0.6.1
-			Flask-Mail==0.9.1
-			Flask-Migrate==3.1.0
-			Flask-Moment==1.0.2
-			flask-mongoengine==1.0.0
-			Flask-SQLAlchemy==2.5.1
-			Flask-WTF==1.0.1
-			idna==3.3
-			importlib-metadata==4.11.3
-			importlib-resources==5.7.1
-			itsdangerous==2.0.0
-			Jinja2==3.1.2
-			Mako==1.2.0
-			MarkupSafe==2.1.1
-			mongoengine==0.24.1
-			mysql-connector-python==8.0.29
-			Pillow==9.1.0
-			protobuf==3.20.1
-			pycparser==2.21
-			PyJWT==2.3.0
-			pymongo==4.1.1
-			PyMySQL==1.0.2
-			SQLAlchemy==1.4.36
-			typing_extensions==4.2.0
-			visitor==0.1.3
-			Werkzeug==2.1.2
-			WTForms==3.0.1
-			zipp==3.8.0 
-
+	alembic==1.7.7
+	bcrypt==3.2.2
+	blinker==1.4
+	cffi==1.15.0
+	click==8.1.3
+	colorama==0.4.4
+	dnspython==2.2.1
+	dominate==2.6.0
+	email-validator==1.2.1
+	Flask==2.1.2
+	Flask-Bcrypt==1.0.1
+	Flask-Bootstrap==3.3.7.1
+	Flask-Login==0.6.1
+	Flask-Mail==0.9.1
+	Flask-Migrate==3.1.0
+	Flask-Moment==1.0.2
+	flask-mongoengine==1.0.0
+	Flask-SQLAlchemy==2.5.1
+	Flask-WTF==1.0.1
+	idna==3.3
+	importlib-metadata==4.11.3
+	importlib-resources==5.7.1
+	itsdangerous==2.0.0
+	Jinja2==3.1.2
+	Mako==1.2.0
+	MarkupSafe==2.1.1
+	mongoengine==0.24.1
+	mysql-connector-python==8.0.29
+	Pillow==9.1.0
+	protobuf==3.20.1
+	pycparser==2.21
+	PyJWT==2.3.0
+	pymongo==4.1.1
+	PyMySQL==1.0.2
+	SQLAlchemy==1.4.36
+	typing_extensions==4.2.0
+	visitor==0.1.3
+	Werkzeug==2.1.2
+	WTForms==3.0.1
+	zipp==3.8.0 
 
 
 
@@ -232,6 +231,56 @@ flaskblog
         models.cpython-37.pyc
         __init__.cpython-37.pyc
 ```
+
+
+## Technologies Used
+
+- Python
+- Flask
+- HTML
+- CSS
+- Bootstrap
+- Jinja2
+
+
+## Design and Architecture
+
+BlogIt follows a scalable and maintainable architecture. The application is designed using the Model-View-Controller (MVC) pattern, separating the data model, business logic, and user interface. This separation allows for easy modification and extension of different components without impacting others. The application leverages Flask's modular structure to organize routes, forms, templates, and static files into separate directories, promoting code organization and reusability.
+
+The database is managed using SQLAlchemy, an Object-Relational Mapping (ORM) library for Python. SQLAlchemy provides a high-level interface for interacting with the database, allowing for efficient data retrieval, modification, and querying. The database schema is defined using SQLAlchemy's declarative syntax, making it easy to define models and their relationships.
+
+The user interface is built using Flask's integrated templating engine, Jinja2. Templates are used to generate dynamic HTML pages by combining static HTML with Python code. Flask's template inheritance feature enables the reuse of common elements across multiple pages, ensuring consistent styling and layout throughout the application.
+
+To enhance the user experience, Flask Blog incorporates Bootstrap, a popular front-end framework. Bootstrap provides a responsive grid system, pre-styled components, and CSS classes that streamline the design process. By leveraging Bootstrap, the application achieves a clean and modern look while ensuring cross-browser compatibility and mobile responsiveness
+
+
+## Deployment
+
+BlogIt is currently deployed on **PythonAnywhere**, a popular Python web hosting service. It is hosted securely and accessible to users. The deployment process involves the following steps:
+
+1. Sign up for an account on PythonAnywhere if you haven't already.
+2. Create a new web app on PythonAnywhere and select the appropriate Python version.
+3. Clone your Flask Blog repository from your version control system (e.g., GitHub) to your PythonAnywhere account.
+4. Set up a virtual environment on PythonAnywhere and install the required dependencies by running `pip install -r requirements.txt` in the project directory.
+5. Configure the necessary environment variables on PythonAnywhere. This includes setting up the database connection details, secret key, and email credentials for the password reset functionality. You can use the PythonAnywhere web interface or define them in a `.env` file.
+6. Set the WSGI file to point to the correct Flask application instance. This typically involves specifying the `app` variable in the WSGI file.
+7. Run database migrations on PythonAnywhere using Alembic or the necessary database migration tool. This ensures that the database schema is up to date.
+8. Start the Flask application on PythonAnywhere by running the appropriate command, such as `python run.py`, in the project directory. You can specify the host and port configuration if needed.
+9. Monitor the PythonAnywhere logs and address any potential issues or errors.
+
+PythonAnywhere provides an easy-to-use web interface and detailed documentation to guide you through the deployment process. Make sure to consult the PythonAnywhere documentation for specific instructions on deploying a Flask application.
+
+## Issues
+
+My current issue is an **SMTP error in the "Forgot Password"** section. When a user requests a password reset email, the application encounters an SMTP error. I am actively investigating and working towards resolving this issue. Any assistance, suggestions, or insights regarding this issue would be greatly appreciated.
+
+If you encounter any other issues or have suggestions for improvement, please feel free to open an issue on the GitHub repository. Your feedback is valuable in making the Flask Blog application better and more robust.
+
+## Acknowledgments
+
+I would like to express my gratitude to the following individuals/resources for their contributions, inspiration, and guidance throughout the development process:
+
+- *Corey Schafer*
 
 ## Contributing
 
