@@ -7,7 +7,6 @@ from flaskblog.config import Config
 
 
 
-
 # creating instance
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -34,7 +33,7 @@ def create_app(config_class=Config):
     from flaskblog.posts.routes import posts
     from flaskblog.main.routes import main
     from flaskblog.errors.handlers import errors
-    
+
     # register blueprints to use it 
     app.register_blueprint(users)
     app.register_blueprint(posts)

@@ -13,3 +13,4 @@ class Config:
     # storing email and passwords to envrionment variable so as to not expose it publicly through code to others
     MAIL_USERNAME = os.environ.get('EMAIL_USER')
     MAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+    

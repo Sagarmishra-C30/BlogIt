@@ -87,3 +87,14 @@ a.article-title:hover {
 	margin-top: 7px;
 	margin-bottom: 13px;
 }
+
+
+.news-title {
+  color: #444444;
+  text-decoration: none;
+}
+
+a.news-title:hover > h5 {
+  color: #428bca;
+  text-decoration: underline;
+}
