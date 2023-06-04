@@ -1,7 +1,8 @@
 from flask import request
 from newsapi import NewsApiClient
+from api import NEWS_API_KEY
 
-newsapi = NewsApiClient(api_key='d1f5a77777e44122a6de651cdd725f1b')
+newsapi = NewsApiClient(api_key=NEWS_API_KEY)
 
 def news():
     # Fetch top news articles

@@ -26,6 +26,10 @@ Secure user authentication using password hashing with bcrypt.
 Protect routes and functionalities from unauthorized access.
 Restrict access to certain actions based on user roles or ownership.
 
+### News
+Flask blog displays news on the sidebar, which helps stay up-to-date with outside world.
+
+
 ## Prerequisites
 
 - Python 3.6 or higher
@@ -93,12 +97,17 @@ To run the Flask Blog application locally, please follow the steps below:
     MAIL_PASSWORD = [your_password]
 ```
 
-6.  Now, run the flask server:
+6.  Get a new api key from newsapi.org and paste it in place of **NEWS_API_KEY** inside **news.py** file
+```shell	
+    newsapi = NewsApiClient(api_key=YOUR_API_KEY)
+```
+
+7.   Now, run the flask server:
 ```shell
     python run.py
 ```	 
 
-7.   Visit the site on the localhost:[port] as specified by the server.
+8.   Visit the site on the localhost:[port] as specified by the server.
 
 
 ## Dependencies
@@ -108,7 +117,9 @@ The Flask Blog application utilizes the following external modules:
 	alembic==1.7.7
 	bcrypt==3.2.2
 	blinker==1.4
+	certifi==2023.5.7
 	cffi==1.15.0
+	charset-normalizer==3.1.0
 	click==8.1.3
 	colorama==0.4.4
 	dnspython==2.2.1
@@ -133,18 +144,22 @@ The Flask Blog application utilizes the following external modules:
 	MarkupSafe==2.1.1
 	mongoengine==0.24.1
 	mysql-connector-python==8.0.29
+	newsapi-python==0.2.7
 	Pillow==9.1.0
 	protobuf==3.20.1
 	pycparser==2.21
 	PyJWT==2.3.0
 	pymongo==4.1.1
 	PyMySQL==1.0.2
+	requests==2.31.0
 	SQLAlchemy==1.4.36
 	typing_extensions==4.2.0
+	urllib3==2.0.2
 	visitor==0.1.3
 	Werkzeug==2.1.2
 	WTForms==3.0.1
-	zipp==3.8.0 
+	zipp==3.8.0
+
 
 
 
@@ -153,6 +168,7 @@ The Flask Blog application utilizes the following external modules:
 The project consists of the following files:
 ```shell
 README.md
+news.py
 run.py
 flaskblog
 │
