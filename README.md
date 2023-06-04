@@ -26,7 +26,7 @@ Secure user authentication using password hashing with bcrypt.
 Protect routes and functionalities from unauthorized access.
 Restrict access to certain actions based on user roles or ownership.
 
-### News
+#### News
 Flask blog displays news on the sidebar, which helps stay up-to-date with outside world.
 
 
@@ -60,7 +60,7 @@ To run the Flask Blog application locally, please follow the steps below:
 ```shell
     venv\Scripts\activate
 ```        
-		For macOS/Linux:
+        For macOS/Linux:
 
 ```shell
     source venv/bin/activate
